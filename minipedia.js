@@ -14,7 +14,7 @@ function onFormSubmit(){
 		success: function(jsonObject) {
 			var pageid = jsonObject.query.pageids[0];
 			var article = jsonObject.query.pages[pageid];
-			article.url = "http://en.wikipedia.org/wiki/" + encodeURIComponent(article.title);
+			article.url = "http://id.wikipedia.org/wiki/" + encodeURIComponent(article.title);
 			article.link = "<a href='" + article.url + "'>" + article.title + "</a>";
 			var editlink = "<a href='" + article.url + "?action=edit&section=0' class='edit-link'>edit</a>";
 			$("#content").html("<h2>" + article.link + editlink + "</h2>");
