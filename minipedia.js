@@ -1,5 +1,5 @@
 function onFormSubmit(){
-	apiUrl = "http://en.wikipedia.org/w/api.php?";
+	apiUrl = "http://id.wikipedia.org/w/api.php?";
 	// API request to load non-random page:
 	// action=parse&page=Concise_Wikipedia&section=0&prop=text&format=txtfm&disablepp
 	// first section of a random article. API query devised by http://stackoverflow.com/q/13517901/266309
