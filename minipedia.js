@@ -1,12 +1,20 @@
 function onFormSubmit(){
 	apiUrl = "http://id.wikipedia.org/w/api.php?";
+	extract = 'action=query&prop=extracts&exintro&grnnamespace=0&indexpageids=true&format=json';
+	random = '&generator=random';
+	titles = '&titles=';
+	var str = window.document.formText.judul.value;
+	if (str != "")
+		theURL = apiURL + extract + titles + str;
+	else
+		theURL = apiURL + extract + random;
 	// API request to load non-random page:
 	// action=parse&page=Concise_Wikipedia&section=0&prop=text&format=txtfm&disablepp
 	// first section of a random article. API query devised by http://stackoverflow.com/q/13517901/266309
 	// action=query&prop=revisions&rvprop=content&rvparse=&rvsection=0&generator=random&grnnamespace=0&indexpageids=true&format=json
 	$.ajax({
 		// https://www.mediawiki.org/wiki/Extension:MobileFrontend#prop.3Dextracts
-		url: apiUrl + 'action=query&prop=extracts&exintro&generator=random&grnnamespace=0&indexpageids=true&format=json',
+		url: theUrl,
 		data: {
 		    format: 'json'
 		},
