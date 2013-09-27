@@ -3,10 +3,10 @@ function onFormSubmit(){
 	extract = 'action=query&prop=extracts&exintro&grnnamespace=0&indexpageids=true&format=json';
 	random = '&generator=random';
 	titles = '&titles=';
-	var str = window.document.formText.judul.value;
+	var str = $_GET['path'];
+		$("#inp_txt").val("Paragraf pembuka artikel " + str);
 	if (str != "") {
 		theURL = apiURL + extract + titles + str;
-		$("#inp_txt").val("Paragraf pembuka artikel " + str);
 	} else {
 		theURL = apiURL + extract + random;
 	}
