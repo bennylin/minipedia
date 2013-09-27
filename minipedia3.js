@@ -4,11 +4,11 @@ function onFormSubmit(){
 	random = '&generator=random';
 	titles = '&titles=';
 	var str = document.getElementById('judul').value ;
-		$("#inp_txt").html("Paragraf pembuka artikel " + str);
+	$("#inp_txt").html("Paragraf pembuka artikel " + str);
+	theURL = apiURL + extract + random;
 	if (str != "") {
 		theURL = apiURL + extract + titles + str;
-	} else {
-		theURL = apiURL + extract + random;
+		$("#inp_txt").html("Paragraf pembuka artikel " + str);
 	}
 	// API request to load non-random page:
 	// action=parse&page=Concise_Wikipedia&section=0&prop=text&format=txtfm&disablepp
