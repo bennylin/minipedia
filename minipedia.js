@@ -3,7 +3,7 @@ function onFormSubmit(){
 	extract = 'action=query&prop=extracts&exintro&grnnamespace=0&indexpageids=true&format=json';
 	random = '&generator=random';
 	titles = '&titles=';
-	var str = $_GET['path'];
+	var str = $_GET['judul'];
 		$("#inp_txt").html("Paragraf pembuka artikel " + str);
 	if (str != "") {
 		theURL = apiURL + extract + titles + str;
