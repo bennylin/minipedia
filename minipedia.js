@@ -4,7 +4,7 @@ function onFormSubmit(){
 	random = '&generator=random';
 	titles = '&titles=';
 	var str = $_GET['path'];
-		$("#inp_txt").val("Paragraf pembuka artikel " + str);
+		$("#inp_txt").html("Paragraf pembuka artikel " + str);
 	if (str != "") {
 		theURL = apiURL + extract + titles + str;
 	} else {
