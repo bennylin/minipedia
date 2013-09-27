@@ -4,10 +4,12 @@ function onFormSubmit(){
 	random = '&generator=random';
 	titles = '&titles=';
 	var str = window.document.formText.judul.value;
-	if (str != "")
+	if (str != "") {
 		theURL = apiURL + extract + titles + str;
-	else
+		$("#inp_txt").val("Paragraf pembuka artikel " + str);
+	} else {
 		theURL = apiURL + extract + random;
+	}
 	// API request to load non-random page:
 	// action=parse&page=Concise_Wikipedia&section=0&prop=text&format=txtfm&disablepp
 	// first section of a random article. API query devised by http://stackoverflow.com/q/13517901/266309
